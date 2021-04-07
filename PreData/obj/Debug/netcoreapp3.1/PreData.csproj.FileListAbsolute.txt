@@ -1,0 +1,13 @@
+C:\Users\WORKSTATION\Desktop\OS\PreData\bin\Debug\netcoreapp3.1\PreData.exe
+C:\Users\WORKSTATION\Desktop\OS\PreData\bin\Debug\netcoreapp3.1\PreData.deps.json
+C:\Users\WORKSTATION\Desktop\OS\PreData\bin\Debug\netcoreapp3.1\PreData.runtimeconfig.json
+C:\Users\WORKSTATION\Desktop\OS\PreData\bin\Debug\netcoreapp3.1\PreData.runtimeconfig.dev.json
+C:\Users\WORKSTATION\Desktop\OS\PreData\bin\Debug\netcoreapp3.1\PreData.dll
+C:\Users\WORKSTATION\Desktop\OS\PreData\bin\Debug\netcoreapp3.1\PreData.pdb
+C:\Users\WORKSTATION\Desktop\OS\PreData\obj\Debug\netcoreapp3.1\PreData.csprojAssemblyReference.cache
+C:\Users\WORKSTATION\Desktop\OS\PreData\obj\Debug\netcoreapp3.1\PreData.AssemblyInfoInputs.cache
+C:\Users\WORKSTATION\Desktop\OS\PreData\obj\Debug\netcoreapp3.1\PreData.AssemblyInfo.cs
+C:\Users\WORKSTATION\Desktop\OS\PreData\obj\Debug\netcoreapp3.1\PreData.csproj.CoreCompileInputs.cache
+C:\Users\WORKSTATION\Desktop\OS\PreData\obj\Debug\netcoreapp3.1\PreData.dll
+C:\Users\WORKSTATION\Desktop\OS\PreData\obj\Debug\netcoreapp3.1\PreData.pdb
+C:\Users\WORKSTATION\Desktop\OS\PreData\obj\Debug\netcoreapp3.1\PreData.genruntimeconfig.cache

@@ -1,0 +1,584 @@
+Breakpoint 1, copy_process (nr=4, ebp=67108324, edi=4092, esi=1, gs=23, none=31079, ebx=20, ecx=5, edx=384736, fs=23, es=23, ds=23, eip=235695, cs=15, eflags=582, esp=67108312, ss=23) at fork.c:74
+74	{
+
+
+=====BEGIN=====
+in	copy_process
+pid:	4	child	pid:	6
+the	number	of	tasks:	4
+child	tss--eip:	0
+=====END=====
+
+
+
+Breakpoint 2, copy_mem (nr=4, p=0xf7a000) at fork.c:41
+41	{
+
+
+=====BEGIN=====
+in	copy_mem
+old_code_base:	63293
+old_data_base:	161528
+data_limit is:	139264
+code_limit is:	162928
+new_data_base is:	139264
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 16, dir_namei (pathname=0x5ddac "", namelen=0xf7aa88, name=0xf7aa8c) at namei.c:280
+280	{
+
+
+=====BEGIN=====
+in dir_namei:
+basename:	0x0 <startup_32>
+return inode dir:	0
+
+=====END=====
+
+
+
+Breakpoint 17, get_dir (pathname=0x5ddac "") at namei.c:229
+229	{
+
+
+=====BEGIN=====
+in get_dir:
+inode->i_count:	0
+thisname which is also the pathname:	0x0 <startup_32>
+
+=====END=====
+
+
+
+Breakpoint 18, find_entry (dir=0xf7aa10, name=0x5ddac "", namelen=1, res_dir=0xf7aa0c) at namei.c:132
+132		de = (struct dir_entry *) bh->b_data;
+
+
+=====BEGIN=====
+in function find_entry:
+the length of finder:	1	 the name:	46 '.'
+47 '/'
+115 's'
+116 't'
+114 'r'
+49 '1'
+
+de:	0x3c4000 "\226\001."
+
+=====END=====
+
+
+
+Breakpoint 19, iget (dev=769, nr=406) at inode.c:245
+245	{
+
+
+=====BEGIN=====
+in function iget:
+the number of dev:	769
+ the number of node:	406
+ the inode:	3308
+
+=====END=====
+
+
+
+Breakpoint 18, find_entry (dir=0xf7aa84, name=0x5ddae "", namelen=4, res_dir=0xf7aa80) at namei.c:132
+132		de = (struct dir_entry *) bh->b_data;
+
+
+=====BEGIN=====
+in function find_entry:
+the length of finder:	4	 the name:	115 's'
+116 't'
+114 'r'
+49 '1'
+
+de:	0x3c4000 "\226\001."
+
+=====END=====
+
+
+
+Breakpoint 19, iget (dev=769, nr=558) at inode.c:245
+245	{
+
+
+=====BEGIN=====
+in function iget:
+the number of dev:	769
+ the number of node:	558
+ the inode:	3308
+
+=====END=====
+
+
+
+Breakpoint 10, do_execve (eip=0xf7afec, tmp=31079, filename=0x5ddac "", argv=0x5decc, envp=0x4b14c) at exec.c:201
+201		argc = count(argv);
+
+
+=====BEGIN=====
+do_execve_namei
+inode	558
+
+=====END=====
+
+
+
+Breakpoint 3, do_execve (eip=0xf7afec, tmp=31079, filename=0x5ddac "", argv=0x5decc, envp=0x4b14c) at exec.c:225
+225		ex = *((struct exec *) bh->b_data);	/* read exec-header */
+
+
+=====BEGIN=====
+do_execve in exec.c for the first part
+in do_execve_inode
+inode information:	
+i_mode:	33225	e_uid:	0	e_gid:	0
+the b_blocknr of bh:	4824
+
+=====END=====
+
+
+
+Breakpoint 7, do_execve (eip=0xf7afec, tmp=31079, filename=0x5ddac "", argv=0x5decc, envp=0x4b14c) at exec.c:347
+347		eip[3] = p;			/* stack pointer */
+
+
+=====BEGIN=====
+do_execve in exec.c in the last part
+brk:	20480
+start_stack:	67104768
+eip and esp:	0	and67108124
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 12, do_no_page (error_code=4, address=268435456) at memory.c:367
+367	{
+
+
+=====BEGIN=====
+do_no_page
+error code	4
+address	0x10000000
+
+=====END=====
+
+
+
+Breakpoint 8, do_no_page (error_code=4, address=268435456) at memory.c:384
+384		block = 1 + tmp/BLOCK_SIZE;
+
+
+=====BEGIN=====
+do_no_page in memory.c
+tmp in the first part in do_no_page:	0
+block start number:	0
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 12, do_no_page (error_code=6, address=268451840) at memory.c:367
+367	{
+
+
+=====BEGIN=====
+do_no_page
+error code	6
+address	0x10004000
+
+=====END=====
+
+
+
+Breakpoint 8, do_no_page (error_code=6, address=268451840) at memory.c:384
+384		block = 1 + tmp/BLOCK_SIZE;
+
+
+=====BEGIN=====
+do_no_page in memory.c
+tmp in the first part in do_no_page:	16384
+block start number:	5
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 12, do_no_page (error_code=4, address=268443352) at memory.c:367
+367	{
+
+
+=====BEGIN=====
+do_no_page
+error code	4
+address	0x10001ed8
+
+=====END=====
+
+
+
+Breakpoint 8, do_no_page (error_code=4, address=268439552) at memory.c:384
+384		block = 1 + tmp/BLOCK_SIZE;
+
+
+=====BEGIN=====
+do_no_page in memory.c
+tmp in the first part in do_no_page:	4096
+block start number:	21
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 12, do_no_page (error_code=4, address=268448104) at memory.c:367
+367	{
+
+
+=====BEGIN=====
+do_no_page
+error code	4
+address	0x10003168
+
+=====END=====
+
+
+
+Breakpoint 8, do_no_page (error_code=4, address=268447744) at memory.c:384
+384		block = 1 + tmp/BLOCK_SIZE;
+
+
+=====BEGIN=====
+do_no_page in memory.c
+tmp in the first part in do_no_page:	12288
+block start number:	9
+=====END=====
+
+
+
+Breakpoint 21, sys_write (fd=1, buf=0x44c0 <pg3+1216> "\a", count=24) at read_write.c:84
+84	{
+
+
+=====BEGIN=====
+in sys_write function
+the node:	70
+the count:	24
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 12, do_no_page (error_code=6, address=335539912) at memory.c:367
+367	{
+
+
+=====BEGIN=====
+do_no_page
+error code	6
+address	0x13ffeec8
+
+=====END=====
+
+
+
+Breakpoint 21, sys_write (fd=1, buf=0x44c0 <pg3+1216> "\a", count=24) at read_write.c:84
+84	{
+
+
+=====BEGIN=====
+in sys_write function
+the node:	18181
+the count:	24
+
+=====END=====
+
+
+
+Breakpoint 21, sys_write (fd=1, buf=0x44c0 <pg3+1216> "\a", count=24) at read_write.c:84
+84	{
+
+
+=====BEGIN=====
+in sys_write function
+the node:	18181
+the count:	24
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 12, do_no_page (error_code=6, address=335535744) at memory.c:367
+367	{
+
+
+=====BEGIN=====
+do_no_page
+error code	6
+address	0x13ffde80
+
+=====END=====
+
+
+
+Breakpoint 21, sys_write (fd=1, buf=0x44c0 <pg3+1216> "\a", count=24) at read_write.c:84
+84	{
+
+
+=====BEGIN=====
+in sys_write function
+the node:	18181
+the count:	24
+
+=====END=====
+
+
+
+Breakpoint 21, sys_write (fd=1, buf=0x44c0 <pg3+1216> "\a", count=24) at read_write.c:84
+84	{
+
+
+=====BEGIN=====
+in sys_write function
+the node:	18181
+the count:	24
+
+=====END=====
+
+
+
+Breakpoint 11, page_fault () at page.s:15
+15		xchgl %eax,(%esp)
+
+
+=====BEGIN=====
+page_fault
+
+=====END=====
+
+
+
+Breakpoint 12, do_no_page (error_code=6, address=335531576) at memory.c:367
+367	{
+
+
+=====BEGIN=====
+do_no_page
+error code	6
+address	0x13ffce38
+
+=====END=====
+
+
+
+Breakpoint 21, sys_write (fd=1, buf=0x44c0 <pg3+1216> "\a", count=24) at read_write.c:84
+84	{
+
+
+=====BEGIN=====
+in sys_write function
+the node:	18181
+the count:	24
+
+=====END=====
+
+
+
+Breakpoint 21, sys_write (fd=1, buf=0x44c0 <pg3+1216> "\a", count=0) at read_write.c:84
+84	{
+
+
+=====BEGIN=====
+in sys_write function
+the node:	18181
+the count:	0
+
+=====END=====
+
+
+
+Breakpoint 9, do_exit (code=0) at exit.c:103
+103	{
+
+
+=====BEGIN=====
+in do_exit
+the exit_code:	0
+=====END=====
